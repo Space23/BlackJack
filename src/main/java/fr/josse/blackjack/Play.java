@@ -1,4 +1,4 @@
-package BlackJack;
+package fr.josse.blackjack;
 
 import lib.Input;
 
@@ -13,7 +13,7 @@ public class Play extends Deal {
 
 		if (cal('p') == 21) {
 		    sleep(500);
-		    System.out.println("!!!!!!!!! BLACKJACK !ï¼!!!!!\n");
+		    System.out.println("!!!!!!!!! BLACKJACK !ï¼?!!!!!\n");
 		    winlose();
 		    break;
 		}
@@ -46,8 +46,8 @@ public class Play extends Deal {
 	while (true) {
 	    if (cal('p') > 21) {
 		sleep(500);
-		System.out.println(" ã‚ãªãŸã®ãƒãƒ¼ã‚¹ãƒˆï¼!!!!!");
-		System.out.println("############COMã®å‹ã¡ã§ã™####code1");
+		System.out.println(" ã?‚ã?ªã?Ÿã?®ãƒ?ãƒ¼ã‚¹ãƒˆï¼?!!!!!");
+		System.out.println("############COMã?®å‹?ã?¡ã?§ã?™####code1");
 		System.out.println();
 		sleep(500);
 		initHands();
@@ -56,12 +56,12 @@ public class Play extends Deal {
 	    }
 
 	    if (cal('c') > 21) {
-		System.out.print("COMã®æ‰‹ ");
+		System.out.print("COMã?®æ‰‹ ");
 		comHand(h);
-		System.out.println("COMã®ã‚«ãƒ¼ãƒ‰ã®åˆè¨ˆ= " + cal('c') + " ãƒãƒ¼ã‚¹ãƒˆï¼");
+		System.out.println("COMã?®ã‚«ãƒ¼ãƒ‰ã?®å?ˆè¨ˆ= " + cal('c') + " ãƒ?ãƒ¼ã‚¹ãƒˆï¼?");
 		cal('c');
 		sleep(500);
-		System.out.println("      ############ã‚ãªãŸã®å‹ã¡ã§ã™####code3");
+		System.out.println("      ############ã?‚ã?ªã?Ÿã?®å‹?ã?¡ã?§ã?™####code3");
 		System.out.println();
 		sleep(500);
 		initHands();
@@ -70,11 +70,11 @@ public class Play extends Deal {
 	    }
 
 	    if (cal('c') > cal('p') && cal('c') < 22) {
-		System.out.print("COMã®æ‰‹ ");
+		System.out.print("COMã?®æ‰‹ ");
 		comHand(h);
-		System.out.println("COMã®ã‚«ãƒ¼ãƒ‰ã®åˆè¨ˆ= " + cal('c'));
+		System.out.println("COMã?®ã‚«ãƒ¼ãƒ‰ã?®å?ˆè¨ˆ= " + cal('c'));
 		sleep(500);
-		System.out.println("############COMã®å‹ã¡ã§ã™####code2");
+		System.out.println("############COMã?®å‹?ã?¡ã?§ã?™####code2");
 		System.out.println();
 		sleep(500);
 		initHands();
@@ -83,10 +83,10 @@ public class Play extends Deal {
 	    }
 
 	    if (cal('c') == cal('p')) {
-		System.out.print("COMã®æ‰‹ ");
+		System.out.print("COMã?®æ‰‹ ");
 		comHand(h);
-		System.out.println("COMã®ã‚«ãƒ¼ãƒ‰ã®åˆè¨ˆ= " + cal('c'));
-		System.out.println("å¼•ãåˆ†ã‘ã§ã™ï¼ˆã‚ãªãŸã®è² ã‘ï¼‰");
+		System.out.println("COMã?®ã‚«ãƒ¼ãƒ‰ã?®å?ˆè¨ˆ= " + cal('c'));
+		System.out.println("å¼•ã??åˆ†ã?‘ã?§ã?™ï¼ˆã?‚ã?ªã?Ÿã?®è² ã?‘ï¼‰");
 		System.out.println();
 		sleep(500);
 		initHands();
@@ -94,9 +94,9 @@ public class Play extends Deal {
 		break;
 	    }
 
-	    System.out.print("COMã®æ‰‹ ");
+	    System.out.print("COMã?®æ‰‹ ");
 	    comHand(h);
-	    System.out.println("COMã®ã‚«ãƒ¼ãƒ‰ã®åˆè¨ˆ= " + cal('c'));
+	    System.out.println("COMã?®ã‚«ãƒ¼ãƒ‰ã?®å?ˆè¨ˆ= " + cal('c'));
 	    sleep(1000);
 
 	    if (cal('c') < cal('p')) {
@@ -112,9 +112,9 @@ public class Play extends Deal {
 	try {
 	    Thread.sleep(i);
 	} catch (InterruptedException e) {
-	    // TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸ catch ãƒ–ãƒ­ãƒƒã‚¯
+	    // TODO è‡ªå‹•ç”Ÿæˆ?ã?•ã‚Œã?Ÿ catch ãƒ–ãƒ­ãƒƒã‚¯
 	    e.printStackTrace();
-	} // ãƒŸãƒªç§’Sleepã™ã‚‹
+	} // ãƒŸãƒªç§’Sleepã?™ã‚‹
 
     }
 }

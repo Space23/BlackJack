@@ -1,4 +1,4 @@
-package BlackJack;
+package fr.josse.blackjack;
 
 import java.io.Serializable;
 

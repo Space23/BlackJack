@@ -1,20 +1,20 @@
-package BlackJack;
+package fr.josse.blackjack;
 
 public class Cards {
     static int cards[]; // card by unique id
     static String cards_m[]; // cards_mark
     static String cards_s[]; // cards_status
-    final int RANK = 13; // マークの種類ごとのカードの数
-    int MAX = RANK * 4; // カードの数
+    final int RANK = 13; // マーク�?�種類�?��?��?�カード�?�数
+    int MAX = RANK * 4; // カード�?�数
 
     // String[] mark = { "♥", "♠", "♣", "♦" };
 
-    // ♥　♠　◆　♣ ❤　♦
+    // ♥　♠　◆　♣ �?�　♦
     void cards() { // initiate cards!
-		   // 1-53のIDで管理されたカードに
-		   // マークを付けてトランプカードにする
+		   // 1-53�?�ID�?�管�?��?�れ�?�カード�?�
+		   // マークを付�?��?�トランプカード�?��?�る
 
-	cards = new int[MAX + 1]; // card 52 +1. 0はジョーカー（使わない）
+	cards = new int[MAX + 1]; // card 52 +1. 0�?�ジョーカー（使�?�?��?�）
 	for (int i = 0; i < cards.length; i++) {
 	    cards[i] = i;
 	}

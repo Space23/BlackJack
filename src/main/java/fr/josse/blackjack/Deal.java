@@ -1,20 +1,20 @@
-package BlackJack;
+package fr.josse.blackjack;
 
 public class Deal extends Cards {
-static 	 int h=7;				//手札の数の最大
-static 	 int[] player = new int[h];		//playerの手札の配列
-static 	 int[] com = new int[h];		//Computerの手札の配列
+static 	 int h=7;				//手札�?�数�?�最大
+static 	 int[] player = new int[h];		//player�?�手札�?��?列
+static 	 int[] com = new int[h];		//Computer�?�手札�?��?列
 static 	 int P = 0;				// player's array number
 static 	 int C = 0;
- 	 char x;				//playerかcomputerかを区別するための引数
+ 	 char x;				//player�?�computer�?�を区別�?�る�?��?�?�引数
 
-	void flip(char x) {			//カードを一枚めくる
-						//引数cならComputer、pならPlayer
+	void flip(char x) {			//カードを一枚�?�??る
+						//引数c�?�らComputer�?p�?�らPlayer
 		if (MAX < h*2)
 			shaffle();
 		for (int i = 0; i < 1; i++) {
 			int n = (int) (Math.random() * 52) + 1;
-			if (cards[n] != 99) {		//しるしとして99を代入してある
+			if (cards[n] != 99) {		//�?�る�?��?��?��?�99を代入�?��?��?�る
 				if (x == 'p') {
 					player[P] = n;
 					P++;
@@ -23,22 +23,22 @@ static 	 int C = 0;
 					com[C] = n;
 					C++;
 				}
-				cards[n] = 99;	//しるしとして99を代入
+				cards[n] = 99;	//�?�る�?��?��?��?�99を代入
 				MAX--;
 			} else
 				i--;
 		}
 	}
 
-	void hands() {				// 最初にカードを配る
+	void hands() {				// 最�?�?�カードを�?る
 		flip('c');
 		flip('p');
 		flip('c');
 		info();
 	}
 
-	void shaffle() {			// カードセットの シャッフル
-		System.out.println("カードをシャッフルします");
+	void shaffle() {			// カードセット�?� シャッフル
+		System.out.println("カードをシャッフル�?��?��?�");
 		MAX = 52;
 		cards_m();
 	}
@@ -66,7 +66,7 @@ static 	 int C = 0;
 		System.out.println();
 	}
 
-	void initHands() {			// 手札の初期化
+	void initHands() {			// 手札�?��?期化
 		for (int i = 0; i < player.length; i++) {
 			player[i] = 0;
 			com[i] = 0;
@@ -75,7 +75,7 @@ static 	 int C = 0;
 		}
 	}
 
-	int cal(char i) {			//手札の計算
+	int cal(char i) {			//手札�?�計算
 		int[] n = player;
 		if (i == 'c')			//'c' for computer
 			n = com;
@@ -106,7 +106,7 @@ static 	 int C = 0;
 		return p;
 	}
 
-	void info() { // 各種情報の表示。 デバックを兼ねる
+	void info() { // �?�種情報�?�表示。 デ�?ックを兼�?�る
 	// comment the lines out which you like to know about.
 //	 show();
 //	 show_s();
@@ -114,12 +114,12 @@ static 	 int C = 0;
 //	 System.out.println("残りカード= " + MAX);
 //	 System.out.println();
 
-		System.out.print("PCの手 ");
-		comHand(1); // 親は一枚目のカードだけ見せる
-		System.out.print("あなたの手 ");
-		yourHand(); //子の手札に因数はない
+		System.out.print("PC�?�手 ");
+		comHand(1); // 親�?�一枚目�?�カード�?��?�見�?�る
+		System.out.print("�?��?��?��?�手 ");
+		yourHand(); //�?�?�手札�?�因数�?��?��?�
 
-		System.out.println("あなたのカードの合計= " + cal('p')); // you
+		System.out.println("�?��?��?��?�カード�?��?�計= " + cal('p')); // you
 	}
 
 }
